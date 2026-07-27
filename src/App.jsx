@@ -1,5 +1,6 @@
 import React from 'react'
 import ExpenseInput from './components/ExpenseInput'
+import Summary from './components/Summary'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <p className="mt-1.5 mb-0 text-[15px] text-[#6b6a5f]">A running record of where your money goes.</p>
       </header>
       <ExpenseInput/>
+      <Summary/>
     
     </div>
   )
