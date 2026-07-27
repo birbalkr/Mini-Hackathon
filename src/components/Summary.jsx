@@ -1,6 +1,11 @@
 import React from 'react'
 import { Pencil, Trash2, Check } from "lucide-react";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteExpense, editExpense } from '../redux/features/ExpenseTrackerSlice';
+
 function Summary() {
+    const dispatch = useDispatch();
+
     return (
         <div>
             <div className="mt-8 space-y-4">
@@ -15,11 +20,11 @@ function Summary() {
                     </div>
 
                     <div className="flex gap-2">
-                        <button className="p-2 rounded-lg bg-yellow-100 text-yellow-600 hover:bg-yellow-200">
+                        <button className="p-2 rounded-lg bg-yellow-100 text-yellow-600 hover:bg-yellow-200" onClick={()=>{dispatch(editExpense())}}>
                             <Pencil size={18} />
                         </button>
 
-                        <button className="p-2 rounded-lg bg-red-100 text-red-600 hover:bg-red-200">
+                        <button className="p-2 rounded-lg bg-red-100 text-red-600 hover:bg-red-200" onClick={()=>{dispatch(deleteExpense())}}>
                             <Trash2 size={18} />
                         </button>
                     </div>
