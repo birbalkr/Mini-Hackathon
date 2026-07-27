@@ -1,7 +1,14 @@
 import React from "react";
 import { Wallet, Bell, User, LogOut } from "lucide-react";
 
+
 function Navbar() {
+    let userData = JSON.parse(localStorage.getItem("userData"));
+    const logout=()=>{
+        userData.isLogin = false;
+        localStorage.setItem("userData", JSON.stringify(userData));
+        window.location.reload();
+    }
     return (
         <nav className="bg-white shadow-md border-b sticky top-0 z-50">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -15,7 +22,8 @@ function Navbar() {
                         </h1>
                     </div>
                 </div>
-                <button>
+                <button onClick={logout} className="flex gap-2 justify-center items-center ">
+                    <p className="text-xl font-bold">{userData.name}</p>
                     <LogOut/>
                 </button>
             </div>
