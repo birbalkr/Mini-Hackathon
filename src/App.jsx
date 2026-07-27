@@ -5,7 +5,7 @@ function App() {
   const userData = JSON.parse(localStorage.getItem("userData"));
   return (
     <>
-      {userData.isLogin ? <AppRoutes /> : <AuthRoutes />}
+      {userData?.isLogin ? <AppRoutes /> : <AuthRoutes />}
     </>
   )
 }
