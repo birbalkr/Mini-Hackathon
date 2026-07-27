@@ -7,9 +7,17 @@ const expensesSlice = createSlice({
         expenses: [],
     },
     reducers: {
-        addExpense: (state, action) => { },
-        deleteExpense: (state, action) => { },
-        editExpense: (state, action) => { }
+        addExpense: (state, action) => {
+            state.expenses.push(action.payload);
+        },
+        deleteExpense: (state, action) => {
+            state.expenses = state.expenses.filter(expense => expense.id !== action.payload);
+        },
+        editExpense: (state, action) => {
+            state.expenses = state.expenses.map(expense =>
+                expense.id === action.payload.id ? action.payload : expense
+            );
+        }
     }
 })
 
