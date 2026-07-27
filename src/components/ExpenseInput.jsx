@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { addExpense } from '../redux/features/ExpenseTrackerSlice';
+import { addExpense } from '../redux/features/expenseTrackerSlice';
 import { nanoid } from '@reduxjs/toolkit';
 
 function ExpenseInput() {
