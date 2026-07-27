@@ -4,6 +4,7 @@ import Summary from './components/Summary'
 
 function App() {
   return (
+
     <div className="max-w-[640px] mx-auto px-5 pt-12 pb-20">
       <header className="text-center mb-7">
         <h1 className="font-serif text-5xl font-bold m-0 tracking-[-0.01em] text-teal-700">Expense Tracker</h1>
