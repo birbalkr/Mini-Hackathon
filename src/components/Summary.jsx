@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Pencil, Trash2, Check } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteExpense, editExpense } from '../redux/features/ExpenseTrackerSlice';
+import { deleteExpense, editExpense } from '../redux/features/expenseTrackerSlice';
 
 function Summary() {
     const dispatch = useDispatch();
