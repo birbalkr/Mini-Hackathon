@@ -22,9 +22,9 @@ function Navbar() {
                         </h1>
                     </div>
                 </div>
-                <button onClick={logout} className="flex gap-2 justify-center items-center ">
+                <button  className="flex gap-2 justify-center items-center ">
                     <p className="text-xl font-bold">{userData.name}</p>
-                    <LogOut/>
+                    <LogOut onClick={logout}/>
                 </button>
             </div>
         </nav>
