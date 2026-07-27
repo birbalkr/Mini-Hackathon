@@ -1,4 +1,5 @@
 import React from 'react'
+import ExpenseInput from './components/ExpenseInput'
 
 function App() {
   return (
@@ -7,6 +8,8 @@ function App() {
         <h1 className="font-serif text-5xl font-bold m-0 tracking-[-0.01em] text-teal-700">Expense Tracker</h1>
         <p className="mt-1.5 mb-0 text-[15px] text-[#6b6a5f]">A running record of where your money goes.</p>
       </header>
+      <ExpenseInput/>
+    
     </div>
   )
 }
