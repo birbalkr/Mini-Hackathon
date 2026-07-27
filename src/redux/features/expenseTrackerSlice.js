@@ -8,19 +8,20 @@ const expensesSlice = createSlice({
     },
     reducers: {
         addExpense: (state, action) => {
-            console.log("addd .......");     
+            console.log("addd .......");
             state.expenses.push(action.payload);
         },
         deleteExpense: (state, action) => {
             console.log("delete ...........");
-            
             state.expenses = state.expenses.filter(expense => expense.id !== action.payload);
         },
         editExpense: (state, action) => {
             console.log("edit .............");
-            state.expenses = state.expenses.map(expense =>
-                expense.id === action.payload.id ? action.payload : expense
-            );
+            const { id, title } = action.payload;
+            const expense = state.expenses.find((item) => item.id === id);
+            if (expense) {
+                expense.title = title;
+            }
         }
     }
 })
